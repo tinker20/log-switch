@@ -1,9 +1,15 @@
 {
   "name": "log-switcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple log switcher that enables your application to toggle between Graylog(production) and Winston.",
   "main": "log.js",
-  "keywords": ["logger", "graylog2", "graylog", "winston", "logging"],
+  "keywords": [
+    "logger",
+    "graylog2",
+    "graylog",
+    "winston",
+    "logging"
+  ],
   "author": "Sayan Bhattacharya <bhattacharyasayan.21@gmail.com>",
   "license": "ISC",
   "dependencies": {
