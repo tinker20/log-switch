@@ -1,5 +1,5 @@
 {
-  "name": "log-switch",
+  "name": "log-switcher",
   "version": "1.0.0",
   "description": "A simple log switcher that enables your application to toggle between Graylog(production) and Winston.",
   "main": "log.js",

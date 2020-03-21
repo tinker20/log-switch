@@ -14,8 +14,8 @@ var grayLogger = new graylog2.graylog({
     servers: [
         { 'host': process.env.GRAYLOG_HOST || 'localhost', port: process.env.GRAYLOG_PORT || '12201' },
     ],
-    hostname: GRAYLOG_HOSTNAME || 'tinker20',
-    facility: GRAYLOG_FACILITY || 'worker',
+    hostname: process.env.GRAYLOG_HOSTNAME || 'tinker20',
+    facility: process.env.GRAYLOG_FACILITY || 'worker',
     bufferSize: 1350
 });
 
