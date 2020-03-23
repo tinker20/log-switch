@@ -9,8 +9,8 @@
  * graylog.debug
  */
 
-var graylog2 = require("graylog2");
-var grayLogger = new graylog2.graylog({
+const graylog2 = require("graylog2");
+const grayLogger = new graylog2.graylog({
     servers: [
         { 'host': process.env.GRAYLOG_HOST || 'localhost', port: process.env.GRAYLOG_PORT || '12201' },
     ],
@@ -28,7 +28,7 @@ var grayLogger = new graylog2.graylog({
  * silly - Not supported currently.
  */
 
-var winston = require("winston");
+const winston = require("winston");
 
 const winstonEnums = {
     emergency: 'error',
@@ -52,8 +52,12 @@ const logger = function(level, message){
         grayLogger[level](message);
     }
     else {
-        winstonLogger.log(winstonEnums[level], message);
+        winstonLogger[winstonEnums[level]](message);
     }
 };
+
+grayLogger.on('error', function (error) {
+    console.error('Error while trying to write to graylog2:', error);
+});
 
 module.exports = logger;
