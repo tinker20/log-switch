@@ -43,7 +43,7 @@ const winstonEnums = {
 
 const winstonLogger = winston.createLogger({
     transports: [
-      new winston.transports.Console()
+      new winston.transports.Console({level: winstonEnums[process.env.LOG_LEVEL]})
     ]
 });   
 
