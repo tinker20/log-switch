@@ -13,6 +13,10 @@
     "winston",
     "logging"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinker20/log-switcher.git"
+  },
   "author": "Sayan Bhattacharya <bhattacharyasayan.21@gmail.com>",
   "license": "ISC",
   "dependencies": {
