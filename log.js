@@ -53,8 +53,7 @@ const winstonLogger = winston.createLogger({
 
 const logger = function (level, message) {
     if (process.env.ENV === 'production') {
-        console.log(level, LOG_LEVEL, graylogEnums, graylogEnums[level], graylogEnums[LOG_LEVEL]);
-        if (graylogEnums[level] <= graylogEnums[LOG_LEVEL]) {
+        if (graylogEnums[level] <= graylogEnums[LOG_LEVEL.toLowerCase()]) {
             grayLogger[level](message);
         }
     }
