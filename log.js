@@ -35,6 +35,7 @@ grayLogger = grayLogger || new graylog2.graylog({
 const winston = require("winston");
 
 const winstonEnums = {
+    close: 'close',
     emergency: 'error',
     alert: 'error',
     critical: 'error',
